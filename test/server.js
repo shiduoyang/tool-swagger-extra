@@ -3,7 +3,7 @@ const Koa = require('koa'),
     koaBody = require('koa-body'),
     cors = require('koa2-cors'),
     path = require('path'),
-    SwaggerExtra = require('../lib'),
+    SwaggerExtra = require('swagger-extra'),
     swaggerExtra = new SwaggerExtra(
         path.join(__dirname,'config','controller'),
         path.join(__dirname,'controller'),

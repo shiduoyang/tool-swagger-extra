@@ -13,6 +13,7 @@
     "koa-body": "^4.1.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "koa2-cors": "^2.0.6"
+    "koa2-cors": "^2.0.6",
+    "swagger-extra": "^1.0.0"
   }
 }
