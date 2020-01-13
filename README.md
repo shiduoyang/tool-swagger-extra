@@ -11,7 +11,37 @@
 
 #### 使用
 
-* 第一步，创建SwaggerExtra实例
+* 第一步：准备swaggerxx.yaml
+
+```yaml
+# ...
+paths:
+  /common/login:
+    post:
+      tags:
+        - tagTest
+      summary: 登录
+      description: code必选；encryptedData，iv授权之后传
+      parameters:
+        - name: code
+          type: string
+          in: formData
+          required: true
+        - name: encryptedData
+          type: string
+          in: formData
+        - name: iv
+          type: string
+          in: formData
+      responses:
+        200:
+          description: successful
+          schema:
+            type: object
+# ...
+```
+
+* 第二步：创建SwaggerExtra实例
 
 ```javascript
 let SwaggerExtra = require('swagger-extra'),
@@ -32,12 +62,12 @@ let SwaggerExtra = require('swagger-extra'),
         },
     );
 ```
-* 第二步，使用routes
+* 第三步：使用routes
 
 ```javascript
 koa.use(swaggerExtra.getRoutes());
 ```
-* 第三步，运行koa工程
+* 第四步，运行koa工程
 
 此时可以通过ip:port/swagger文件名来访问swagger并可以通过swagger来访问接口。
 
