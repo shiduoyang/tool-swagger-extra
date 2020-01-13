@@ -17,7 +17,7 @@ Common.prototype.login = async function (ctx, next){
 		code = paramsBody.code,
 		encryptedData = paramsBody.encryptedData,
 		iv = paramsBody.iv;
-	ctx.body = { code: 200 };
+	ctx.body = {code: 200,};
 }
 
 /**
@@ -33,7 +33,7 @@ Common.prototype.login2 = async function (ctx, next){
 		code2 = paramsBody.code2,
 		encryptedData2 = paramsBody.encryptedData2,
 		iv2 = paramsBody.iv2;
-	ctx.body = { code: 200 };
+	ctx.body = {code: 200,};
 }
 
 //############interface area###############

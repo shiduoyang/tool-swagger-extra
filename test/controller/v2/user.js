@@ -15,7 +15,7 @@ User.prototype.spLogin2 = async function (ctx, next){
 	const paramsBody = ctx.params,
 		code2 = paramsBody.code2,
 		encryptedData2 = paramsBody.encryptedData2;
-	ctx.body = { code: 200 };
+	ctx.body = {code: 200,};
 }
 
 //############interface area###############

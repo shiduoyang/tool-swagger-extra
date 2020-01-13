@@ -5,10 +5,15 @@ const Koa = require('koa'),
     path = require('path'),
     SwaggerExtra = require('swagger-extra'),
     swaggerExtra = new SwaggerExtra(
-        path.join(__dirname,'config','controller'),
-        path.join(__dirname,'controller'),
-        true,
-        true,
+        path.join(__dirname, 'config', 'controller'),
+        path.join(__dirname, 'controller'),
+        {
+            isAutoFixControllersOpen: true,
+            isSwaggerOpen: true,
+            postBodyGetCode: 'ctx.request.body',
+            getParamsGetCode: 'ctx.params',
+            controllerReturnCode: 'ctx.body = {code: 200,};'
+        },
     );
 
 koa.use(koaBody({ multipart: true }));
