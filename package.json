@@ -1,6 +1,6 @@
 {
   "name": "swagger-extra",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "基于swagger.yaml的nodejs接口映射工具",
   "main": "index.js",
   "scripts": {
