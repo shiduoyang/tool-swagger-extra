@@ -14,7 +14,7 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "swagger-extra": "^1.0.7"
   }
 }
